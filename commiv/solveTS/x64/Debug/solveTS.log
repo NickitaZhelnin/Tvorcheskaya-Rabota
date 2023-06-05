@@ -1,0 +1,22 @@
+﻿  Source.cpp
+c:\users\nicki\desktop\commiv\solvets\source.cpp(100): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\nicki\desktop\commiv\solvets\source.cpp(128): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\nicki\desktop\commiv\solvets\source.cpp(139): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\nicki\desktop\commiv\solvets\source.cpp(145): warning C4334: <<: результат 32-разрядного смещения неявно преобразуется в 64-разрядное значение (предполагалось 64-разрядное смещение?)
+  solveTS.vcxproj -> C:\Users\nicki\Desktop\commiv\solveTS\x64\Debug\solveTS.exe
