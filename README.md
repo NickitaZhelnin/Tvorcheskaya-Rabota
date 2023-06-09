@@ -6,3 +6,7 @@ https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/blob/fdb94d7ad4c1933cb98d3
 Отчет по АРМ:
 
 https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/blob/0570ec864198a9d6ce48873e7010c8ec2100f5ba/ARM_DPS/arm.md
+
+Ссылка на видео-отчет:
+
+https://youtu.be/-d8ysfCiHRA
