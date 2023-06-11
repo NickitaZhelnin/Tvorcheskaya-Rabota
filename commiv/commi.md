@@ -6,10 +6,8 @@
 2. Необходимо реализовать матрицу смежности
 3. Визуализировать граф
 ## Структура
-![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/fcf044b0-7cf1-4ffc-bf74-a2c6f99d963b)
-## Нахождние минимальной границы
-![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/d4b18827-ff10-4837-9037-1047282223ac)
+![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/01162c06-055d-44ae-8345-7ffc4f11eb3c)
 ## Нахождение ответа
-![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/0d125ec9-39c7-4244-8c7f-d9e249469195)
+![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/c6e803c6-8bd6-42b8-991e-1e91f3fd3577)
 ## Визуализация выполнена с помощью библиотеки SFML
 ![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/9c7a5704-483a-47a0-b8b8-037a90f52e7d)
