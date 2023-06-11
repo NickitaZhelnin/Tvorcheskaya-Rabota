@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <SFML/Graphics.hpp>
+#include <vector>
 using namespace std;
 
 const int windowWidth = 800;
