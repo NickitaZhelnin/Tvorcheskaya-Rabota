@@ -117,11 +117,9 @@ int main() {
             sf::Text citynumb{to_string(i + 1), font, 20 };
             citynumb.setFillColor(sf::Color::Black);         
             sf::FloatRect bounds = city[i].getGlobalBounds();
-            float xx = bounds.left + bounds.width / 2;
-            float yy = bounds.top;
             sf::FloatRect nameb = citynumb.getLocalBounds();
-            float xxname = xx - nameb.width / 2;
-            float yyname = yy - nameb.height - 10;
+            float xtxt = bounds.left + bounds.width / 2 - nameb.width / 2;
+            float ytxt = bounds.top - nameb.height - 10;
 
             bool flag = false;
             for (const auto& edge : roads) {
