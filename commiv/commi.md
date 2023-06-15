@@ -18,4 +18,4 @@
 ## Вывод в консоль
 ![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/475252b0-ee83-461a-a127-89a86e1334ad)
 ## Визуализация выполнена с помощью библиотеки SFML
-![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/9c7a5704-483a-47a0-b8b8-037a90f52e7d)
+![image](https://github.com/NickitaZhelnin/Tvorcheskaya-Rabota/assets/130294527/9d3c68ee-2d99-4e7f-a37b-e0c528aebeec)
