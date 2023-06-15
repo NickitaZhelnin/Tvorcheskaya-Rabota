@@ -18,7 +18,7 @@ vector<vector<int>> matr(n, vector<int>(n));
 vector<vector<int>> matr2;
 vector<vector<int>> matr3;
 vector<pair<int, int>> way;
-vector<sf::CircleShape> city(n, sf::CircleShape(25));
+vector<sf::CircleShape> city(n, sf::CircleShape(35));
 vector<Edge> roads;
 
 
@@ -202,17 +202,39 @@ int main() {
         cerr << "Ошибка загрузки шрифта" << endl;
         return 1;
     }
+    sf::Image icon;
+    icon.loadFromFile("icon.png");
+    
+    sf::Image table;
+    table.loadFromFile("t2.png");
+    sf::Texture texture_table;
+    texture_table.loadFromImage(table);
+    sf::Sprite table_sprite(texture_table, sf::IntRect(0, 0, 800, 600));
+
+    sf::Image donut;
+    donut.loadFromFile("donut.png");
+    sf::Texture texture_donut;
+    texture_donut.loadFromImage(donut);
+    texture_donut.setRepeated(true);
+
     sf::Text solvebutton{L"Решить", font, 24 };
     solvebutton.setFillColor(sf::Color{0x8686CB});
     solvebutton.setPosition(windowWidth - 440, windowHeight - 60);  
-    
+    //БОЛЬШИЕ ГОРОДАААААА
     for (int i = 0; i < n; i++) {
         city[i].setPosition(windowWidth / (n + 1) * (i + 1), windowHeight / 2);
-        city[i].setFillColor(sf::Color{0xFCBAD3});
+        city[i].setTexture(&texture_donut);
+        city[i].setTextureRect(sf::IntRect(0, 0, 722, 722));
+        city[i].setFillColor(sf::Color(252, 186-i*5, 211));
+        
     }
 
     sf::RenderWindow window{ {800, 600}, L"Задача Коммивояжера" };
     window.setFramerateLimit(0);
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    sf::Vector2u sizewin = window.getSize();
+    unsigned int w = sizewin.x;
+    unsigned int h = sizewin.y;   
 
     int curv = -1;
 
@@ -241,6 +263,17 @@ int main() {
             if (solve_event.type == sf::Event::MouseMoved && curv != -1) {
                 sf::Vector2i pos = sf::Mouse::getPosition(window);
                 city[curv].setPosition(pos.x - city[curv].getRadius(), pos.y - city[curv].getRadius());
+                int citySize = 35;
+                ;
+                if (city[curv].getPosition().x < 0)
+                    city[curv].setPosition(0, (city[curv].getPosition().y));
+                else if (city[curv].getPosition().x > 730)
+                    city[curv].setPosition(730, (city[curv].getPosition().y));
+
+                if (city[curv].getPosition().y < 20)
+                    city[curv].setPosition((city[curv].getPosition().x), 20);
+                else if (city[curv].getPosition().y > 530)
+                    city[curv].setPosition((city[curv].getPosition().x), 530);
             }
             if (solve_event.type == sf::Event::MouseButtonReleased && solve_event.mouseButton.button == sf::Mouse::Left) {
                 curv = -1;
@@ -250,6 +283,7 @@ int main() {
             }
         }
         window.clear(sf::Color::White);
+        window.draw(table_sprite);
         for (int i = 0; i < n; i++) {
             sf::Text citynumb{to_string(i + 1), font, 20 };
             citynumb.setFillColor(sf::Color::Black);         
@@ -298,6 +332,7 @@ int main() {
         }
         window.draw(st);
         window.draw(solvebutton);
+        
         window.display();
     }
     return 0;
